@@ -150,7 +150,7 @@
   </section>
 
   <section>
-    <div class="label">Od 26 października 2025</div>
+    <div class="label">Od 26 października 2024</div>
     <h2>Jesteśmy razem już</h2>
     <div class="counter" aria-live="off">
       <div class="cell"><b id="d">0</b><small>dni</small></div>
@@ -233,7 +233,7 @@
 <script>
 (function(){
   // ---------- licznik ----------
-  var start = new Date(2025, 9, 26, 0, 0, 0);
+  var start = new Date(2024, 9, 26, 0, 0, 0);
   var $ = function(id){return document.getElementById(id)};
   function pad(n){return (n<10?'0':'')+n}
   function tick(){
@@ -245,7 +245,7 @@
     $('s').textContent = pad(s%60);
     var y = now.getFullYear(), ann = new Date(y, 9, 26);
     if (now > new Date(y, 9, 27)) ann = new Date(y+1, 9, 26);
-    var years = ann.getFullYear() - 2025;
+    var years = ann.getFullYear() - 2024;
     var days = Math.ceil((ann - new Date(now.getFullYear(), now.getMonth(), now.getDate()))/86400000);
     var word = years===1 ? 'pierwsza' : years===2 ? 'druga' : years===3 ? 'trzecia' : years+'.';
     $('next').textContent = days===0 ? 'Dziś nasza '+word+' rocznica!' :
